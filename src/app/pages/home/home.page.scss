@@ -1,7 +1,6 @@
 .text-center{
   font-family: 'Oswald', sans-serif;
   font-size: 40px;
-  margin-top: 5%;
 }
 
 .card{
@@ -14,4 +13,16 @@
   display: flex;
   justify-content: center;
   margin: 0;
+}
+
+.title-toolbar{
+  font-family: 'Poppins', sans-serif;  
+  font-size: 20.96px 
+}
+
+ion-toolbar a{
+  font-size: 16px;
+  font-family: 'DM Sans', sans-serif;
+  text-decoration: none;
+  color: #ffffff;
 }
