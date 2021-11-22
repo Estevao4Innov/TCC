@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InformationsPageRoutingModule } from './informations-routing.module';
+import { ApplicationsPageRoutingModule } from './applications-routing.module';
 
-import { InformationsPage } from './informations.page';
+import { ApplicationsPage } from './applications.page';
 import { ComponentsModule } from 'src/app/components/toolbar/components.module';
+import { FooterModule } from 'src/app/components/footer/footer.module';
 
 @NgModule({
   imports: [
@@ -15,8 +16,9 @@ import { ComponentsModule } from 'src/app/components/toolbar/components.module';
     FormsModule,
     IonicModule,
     ComponentsModule,
-    InformationsPageRoutingModule
+    FooterModule,
+    ApplicationsPageRoutingModule
   ],
-  declarations: [InformationsPage]
+  declarations: [ApplicationsPage]
 })
-export class InformationsPageModule {}
+export class ApplicationsPageModule {}

@@ -1,0 +1,42 @@
+<app-toolbar></app-toolbar>
+<ion-content>
+  <div>
+    <img
+      src="../../../assets/icon/bar_play.png"
+      style="width: 100%; border-bottom: 3px solid var(--ion-color-primary)"
+    />
+  </div>
+
+  <ion-card class="ion-padding ion-no-margin">
+    <ion-card-header>
+      <ion-title class="ion-text-center text-center" color="dark"
+        >ESCOLHA SEU JOGO !</ion-title
+      >
+    </ion-card-header>
+
+    <ion-row>
+      <ion-col class="between">
+        <ion-img
+          *ngFor="let img of firstLine"
+          [src]="img.image"
+          class="card ion-margin"
+          (click)="sendInformations(img.name, img.image, img.requiredBits, img.minSO, img.minCPU, img.minRAM, img.minVideoCard, img.minStorage, img.maxSO, img.maxCPU, img.maxRAM, img.maxVideoCard, img.maxStorage)"
+        ></ion-img>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col class="between">
+        <ion-img
+          *ngFor="let img of secondLine"
+          [src]="img.image"
+          class="card ion-margin"
+          (click)="sendInformations(img.name, img.image, img.requiredBits, img.minSO, img.minCPU, img.minRAM, img.minVideoCard
+        , img.minStorage, img.maxSO, img.maxCPU, img.maxRAM, img.maxVideoCard, img.maxStorage)"
+        ></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-card>
+
+  <app-footer></app-footer>
+</ion-content>

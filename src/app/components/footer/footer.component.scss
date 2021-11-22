@@ -1,0 +1,21 @@
+#footer{
+    width: 100%;
+
+    .black{
+        color: #000000;
+    }
+
+    ion-toolbar{
+        --background: var(--ion-color-primary);
+        height: 10rem;
+        padding: 3rem;
+    }
+    ion-label {
+        font-weight: bold;
+    }
+}
+
+.title-toolbar{
+    font-family: 'Poppins', sans-serif;  
+    font-size: 2rem;
+  }

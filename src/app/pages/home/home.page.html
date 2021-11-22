@@ -1,54 +1,130 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-row class="ion-align-items-center">
-      <ion-col size="7"><ion-label class="title-toolbar ion-padding-start">your</ion-label><ion-label class="title-toolbar" color="primary">computer</ion-label></ion-col>
-      <ion-col size="1">
-        <a href="">Início</a>
-      </ion-col>
-      <ion-col size="1">
-        <a href="">Sobre</a>
-      </ion-col>
-      <ion-col size="1">
-        <a href="">Serviços</a>
-      </ion-col>
-      <ion-col size="1">
-        <a href="">Depoimentos</a>
-      </ion-col>
-      <ion-col size="1">
-        <a href="">Contatos</a>
-      </ion-col>
-    </ion-row>
-
-
-  </ion-toolbar>
-</ion-header>
+<app-toolbar></app-toolbar>
 
 <ion-content>
-  <ion-card class="ion-padding">
+  <div id="content">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" class="ion-text-center">
+           <h1 class="title-first">Nos iremos te guiar para as melhores especificações que estiver procurando !</h1><br/>
+           <ion-label>Uma loja totalmente online, iremos te auxiliar totalmente na montagem do computador dos seus sonhos.</ion-label><br/><br/>
+           <ion-label>Seja para trabalho ou para jogos aqui se encontra as melhores recomendações.</ion-label>
+           <ion-button fill="outline" color="primary" style="margin-top: 2rem;">
+             <b style="color:#ffffff">Recomendações Disponíveis</b> 
+           </ion-button>
+        </ion-col>
+        <ion-col size="6">
+          <ion-slides pager="true" [options]="slideOptions" style="width:80%; height: 90%; border: 9px solid var(--ion-color-primary); border-radius: 20px;">
+            <ion-slide>
+              <img 
+              src="https://cdn.dooca.store/1841/files/monte-seu-pc.png?v=1610807331&webp=0"/>
+            </ion-slide> 
+            <ion-slide >
+                <img 
+                src="https://www.oficinadanet.com.br/imagens/post/30289/2021_x_1400x788.jpg"/>
+              </ion-slide> 
+              <ion-slide >
+                <img 
+                src="https://snobmonkey.com/wp-content/uploads/2019/04/adobe-blog-banner-1-1024x585-1024x585.jpg"/>
+              </ion-slide> 
+            </ion-slides
+        ></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="divider"></div>
 
-    <ion-card-header>
-      <ion-title class="ion-text-center text-center" color="dark">ESCOLHA SEU JOGO !</ion-title>
-    </ion-card-header>
+  <div id="about">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6">
+          <img class="image-about"src="https://images.unsplash.com/photo-1544652478-6653e09f18a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80">
+        </ion-col>
+        <ion-col size="6" class="ion-text-center ion-align-self-center">
+          <h1 class="title-first">Sobre nós</h1><br/>
+          <ion-label>Vamos te auxíliar totalmente na montagem do seu computador, mostrando sempre os melhores preços em nossas lojas parceiras.</ion-label><br/><br/>
+          <ion-label>Mesmo que você não entenda sobre o assunto, apenas com alguns cliques você irá ter uma maquina perfeita para fazer o que você deseja.</ion-label><br/><br/>
+          <ion-label>Somos atualmente uma das melhores lojas em vendas de Computadores e Hardwares, venha já montar sua maquina e aproveite as nosass ofertas !</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+  <div class="divider"></div>
 
-    <ion-row>
-      <ion-col class="between">
-        <ion-img 
-        *ngFor="let img of firstLine" 
-        [src]="img.image" class="card ion-margin" 
-        (click)="sendInformations(img.name, img.image, img.requiredBits, img.minSO, img.minCPU, img.minRAM, img.minVideoCard, img.minStorage, img.maxSO, img.maxCPU, img.maxRAM, img.maxVideoCard, img.maxStorage)"></ion-img>
-      </ion-col>
-    </ion-row>
+  <div id="services">
+    <ion-grid>
+      <ion-row class="ion-text-center">
+        <ion-col>
+          <ion-title class="title-first">Serviços</ion-title>
+        </ion-col>
+      </ion-row>
+      <ion-row class="ion-text-center" style="margin-bottom: 4rem;">
+        <ion-col>
+          <ion-label>Com o intuito de ajudar pessoas leigas no assunto.<br/> A <ion-label color="primary"><b>yourcomputer</b></ion-label> está crescendo exponencialmente para ajudar pessoas<br/> a achar seu hardware ideal para suas tarefas</ion-label>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size="3"></ion-col>
+        <ion-col size="3">
+          <ion-card class="ion-text-center">
+            <ion-card-header>
+                <ion-icon name="game-controller" color="primary"></ion-icon>
+                <ion-title color="dark">Escolha seu Jogo</ion-title>
+            </ion-card-header> 
+             <ion-card-content>
+              <ion-label>Você podera montar seu computador do que jeito que você desejar, sempre te auxiliando nas melhores escolhas sobre o seu Hardware</ion-label>
+              <ion-button  expand="block" fill="outline" (click)="toForward('games')">
+                ESCOLHER MEU JOGO
+              </ion-button>
+             </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card class="ion-text-center">
+            <ion-card-header >
+              <ion-icon name="logo-dropbox" color="primary"></ion-icon>
+              <ion-title color="dark">Programas</ion-title>
+          </ion-card-header>
+          <ion-card-content>
+            <ion-label>Você podera montar seu computador do que jeito que você desejar, sempre te auxiliando nas melhores escolhas sobre o seu Hardware</ion-label>
+            <ion-button expand="block" fill="outline" (click)="toForward('applications')">
+              ESCOLHER MEU PROGRAMA
+            </ion-button>
+          </ion-card-content>
+          </ion-card>
+        </ion-col>
+        <ion-col size="3"></ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
-    <ion-row>
-      <ion-col class="between">
-        <ion-img *ngFor="let img of secondLine" 
-        [src]="img.image" 
-        class="card ion-margin" 
-        (click)="sendInformations(img.name, img.image, img.requiredBits, img.minSO, img.minCPU, img.minRAM, img.minVideoCard
-        , img.minStorage, img.maxSO, img.maxCPU, img.maxRAM, img.maxVideoCard, img.maxStorage)"></ion-img>
-      </ion-col>
-    </ion-row>
+  <div class="divider"></div>
 
-  </ion-card>
+  <div id="contact">
+    <ion-grid>
+      <ion-row>
+        <ion-col size="2">
+        </ion-col>
+        <ion-col class="ion-text-start" size="4">
+          <h1 class="title-first">Entre em contato com a gente</h1><br/>
+          <ion-label style="font-size: 18px;">Entre em contato com a yourcomputer, queremos tirar suas dúvidas,ouvir suas críticas e sugestões</ion-label><br/><br/><br/>
+           <ion-button size="large">
+            <ion-icon slot="start" name="logo-whatsapp" color="dark"></ion-icon>
+             Entrar em contato
+           </ion-button>
+        </ion-col>
+        <ion-col size="2">
+        </ion-col>
+        <ion-col size="4" class="ion-align-self-center">
+          <ion-label style="font-size: 20px;">
+            <ion-icon slot="start" name="call-outline" color="primary" style="font-size: 2rem;"></ion-icon>  18 99999-9999</ion-label> <br/><br/>
+          <ion-label style="font-size: 20px;">
+            <ion-icon slot="start" name="location-outline" color="primary" style="font-size: 2rem;"></ion-icon>  R. Etec Assis, 299</ion-label> <br/><br/>
+          <ion-label style="font-size: 20px;">
+          <ion-icon slot="start" name="mail-outline" color="primary" style="font-size: 2rem;"></ion-icon>  yourcomputer@gmail.com</ion-label>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
 
+  <app-footer></app-footer>
 </ion-content>

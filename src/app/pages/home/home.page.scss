@@ -1,28 +1,85 @@
-.text-center{
-  font-family: 'Oswald', sans-serif;
-  font-size: 40px;
+#content{
+    padding: 5.6rem 0 5.6rem 2rem;
+
+    ion-label{
+        font-size: 18px;
+        font-family: 'DM Sans', sans-serif;
+        color: #ffffff;
+    }
 }
 
-.card{
-  height: 200px;
-  width: 170px;
-  cursor: pointer;
+#about{
+    padding: 5.6rem 0 5.6rem 2rem;
+
+    ion-label{
+        font-size: 18px;
+        font-family: 'DM Sans', sans-serif;
+        color: #ffffff;
+    }
+    .image-about{
+        height: 95%;
+        width: 95%;
+        border-style: solid;
+        border-width: 7px;
+        border-image: conic-gradient(red, yellow, lime, aqua, blue, magenta, red) 1;
+    }
 }
 
-.between{
-  display: flex;
-  justify-content: center;
-  margin: 0;
+#services{
+    padding: 5.6rem 0 5.6rem 2rem;
+
+    ion-label {
+        font-size: 18px;
+        font-family: 'DM Sans', sans-serif;
+    }
+
+    ion-icon{
+       font-size: 100px;
+    }
+    ion-card{
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        border-bottom: 6px solid white;
+        ion-title{
+            font-family: 'Poppins', sans-serif;  
+            font-size: 24px 
+        }
+        ion-card-content{
+         font-size: 18px;
+        font-family: 'DM Sans', sans-serif;
+
+        ion-button{
+            margin-top: 30px;
+        }
+
+        }
+    }
 }
 
-.title-toolbar{
-  font-family: 'Poppins', sans-serif;  
-  font-size: 20.96px 
+#contact{
+    padding: 5.6rem 0 6rem 2rem;
+
+    ion-button{
+        font-family: 'DM Sans', sans-serif;
+        color: white;
+    }
+    ion-label{
+        font-family: 'DM Sans', sans-serif;
+    }
 }
 
-ion-toolbar a{
-  font-size: 16px;
-  font-family: 'DM Sans', sans-serif;
-  text-decoration: none;
-  color: #ffffff;
+.title-first{
+    font-size: 32px;
+    font-family: 'Poppins', sans-serif;
 }
+
+.divider{
+    height: 1px;
+    background: linear-gradient(
+      270deg,
+      rgb(51, 255, 44),
+      hsla(51, 65%, 88%, 0.34)
+    );
+}
+
+

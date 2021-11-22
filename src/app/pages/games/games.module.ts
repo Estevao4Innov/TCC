@@ -4,10 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InformationsPageRoutingModule } from './informations-routing.module';
+import { GamesPageRoutingModule } from './games-routing.module';
 
-import { InformationsPage } from './informations.page';
+import { GamesPage } from './games.page';
 import { ComponentsModule } from 'src/app/components/toolbar/components.module';
+import { FooterModule } from 'src/app/components/footer/footer.module';
 
 @NgModule({
   imports: [
@@ -15,8 +16,9 @@ import { ComponentsModule } from 'src/app/components/toolbar/components.module';
     FormsModule,
     IonicModule,
     ComponentsModule,
-    InformationsPageRoutingModule
+    FooterModule,
+    GamesPageRoutingModule
   ],
-  declarations: [InformationsPage]
+  declarations: [GamesPage]
 })
-export class InformationsPageModule {}
+export class GamesPageModule {}
